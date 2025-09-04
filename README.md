@@ -1,2 +1,2 @@
-# My-proyecto-web
+# My-store-web
 Pagina web 
