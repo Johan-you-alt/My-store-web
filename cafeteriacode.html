@@ -29,18 +29,82 @@
                      <!--<a>(etiqueta de anclaje) sirve para crear hipervínculos y permitir a los usuarios navegar entre páginas web,archivos o secciones dentro de una misma página -->
                         <!--href-es el atributo que especifica la URL o ruta de destino del enlace-->
                             <!--target-Controla la ventana o el marco en el que se abrirá el recurso enlazado
-                                _blank: Abre el enlace en una nueva pestaña o ventana
-                                _self: Abre el enlace en la misma ventana o marco actual (es el valor predeterminado)-->
+                                blank: Abre el enlace en una nueva pestaña o ventana
+                                self: Abre el enlace en la misma ventana o marco actual (es el valor predeterminado)-->
                             <!--download-Indica al navegador que debe descargar el recurso especificado en lugar de abrirlo en el navegador-->
                             <!--rel-Define la relación entre el documento actual y el documento enlazado. Puede usarse para, por ejemplo, indicar que un enlace es de patrocinio (sponsored) o tiene un fin comercial-->
     <main>
         <section>
             <h2>Bienvenidos a su Cafeteria Favorita</h2>
-          
+            <p>Para un delicioso comienzo ven y ordena en Croissant...</p>
+           <iframe width="70%" height="100%" 
+             src="https://www.youtube.com/embed/bQsYg4JUU1g?si=wTSSFggSITarWWqt" 
+             title="YouTube video player" 
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+             referrerpolicy="strict-origin-when-cross-origin" 
+             allowfullscreen>
+           </iframe>
         </section>
-    </main>
+
     <!--<main>una etiqueta que sirve para marcar el contenido principal de una página web-->
         <!--<section>una etiqueta que se usa para crear secciones-->
+            <!--<h2>una etiqueta que se utiliza para definir subtítulos o títulos secundarios dentro de una página web-->
+            <!--<p>una etiqueta que se usa para definir un párrafo de texto en una página web,-->
+            <!--<video>es una etiqueta que sirve para insertar y reproducir un archivo de video en una página web
+                atributos:   
+                   src=especifica la URL del archivo de video que se va a incrustar.
+                   controls=Muestra los controles de reproducción predeterminados del navegador, como el botón de reproducir/pausar, la barra de progreso y el control de volumen. Si se omite, el video no tendrá controles visibles por el usuario.
+                   autoplay=Inicia automáticamente la reproducción del video tan pronto como la página se carga. Por lo general, requiere que el video esté silenciado debido a las políticas de los navegadores para evitar la reproducción automática con sonido.
+                   muted: Silencia el audio del video por defecto. Es útil cuando se usa junto con autoplay para cumplir con las políticas de reproducción automática.
+                   loop: Hace que el video se reproduzca en un bucle continuo, volviendo a empezar desde el principio una vez que termina.
+                            windth=Define el ancho del reproductor de video en píxeles.
+                            height: Define la altura del reproductor de video en píxeles.
+                            poster="https://via.placeholder.com/640x360.png?text=Video+del+Cafe":es un marcador de posición de imagen temporal,Su función principal es servir como un espacio de trabajo o maqueta para que los diseñadores y desarrolladores web puedan visualizar cómo se verá el diseño final de la página antes de que el video real esté listo. 
+                            -->
+                <!--<source>es una etiqueta que se usa para especificar múltiples fuentes de medios (video, audio o imágenes)dentro de etiquetas como <video>, <audio> y <picture>,Su principal función es ofrecer al navegador diferentes formatos del mismo archivo multimedia para que pueda elegir y cargar el que sea compatible con el navegador del usuario.
+                    src=especifica la URL del archivo que se va a incrustar y transmitir en la pagina web.
+                    type=es un atributo que ayuda al navegador a entender qué tipo de datos o formato de archivo debe esperar y cómo debe procesarlo, lo que optimiza la carga de la página.-->
+        <section id="menu">
+            <h2>Nuestro Menú de café</h2>
+             
 
+            <article>
+                <h3>Espresso</h3>
+                <p>Un trago de espresso puro y concentrado. Ideal para empezar el día</p>
+                <img src="https://www.imahe.cl/14214-large_default/Taza-De-Caf%C3%A9-100Cc-Con-Platillos-Apilable.jpg"
+                     alt="Un vaso de espresso" width="20%" height="10%">
+                <p>Precio: $3.50</p>
+                <button type="submit">Añadir al carrito</button>
+            </article>
+
+                
+            <article>  
+                <h3>Latte</h3>
+                <p>Un clásico café con leche vaporizada, con una fina capa de espuma</p>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/049/632/997/small_2x/heart-shaped-latte-art-in-a-white-cup-with-coffee-beans-isolated-on-wooden-table-side-view-of-taiwan-baked-food-photo.jpg" 
+                     alt="Un vaso de latte" width="20%" height="10%">
+                <p>Precio: $4.50</p>
+                <button type="submit">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <h3>Cappuccino</h3>
+                <p>Una mezcla perfecta de espresso, leche y mucha espuma de leche.</p>
+        </section>         
+                <!--id=es un atributo que sirve como un Vínculo de Anclaje (Navegación dentro de la página)
+                 Ejemplo: id="contactenos" te permite crear un enlace como 
+                <a href="#contactenos">Contacto</a> para que, al hacer clic,
+                 el navegador te desplace directamente a esa sección.-->   
+                <!--<img>es una etiqueta que se utiliza para insertar una imagen en una página web.
+                          src=Especifica la dirección o URL del archivo de la imagen que se va a mostrar.
+                          alt=Este atributo proporciona un texto descriptivo de la imagen.--> 
+                <!--<button>es una etiqueta que se usa para crear un botón interactivo en una página web.
+                    type: Define el comportamiento del botón. Los valores más comunes son:
+                         submit: Envía los datos del formulario. Es el valor por defecto.
+                         button: Un botón genérico que no tiene un comportamiento predeterminado. Ideal para usar con JavaScript.
+                         reset: Restablece todos los campos del formulario a sus valores iniciales.-->
+
+    </main>                
 </body>  
 </html>
