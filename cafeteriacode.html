@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croissant & Caffe</title>
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 
 
-
-<body style="background-color: #dbc39ece;">
-    
+<body id="inicio">
+   <!--No le puse color de fondo a la pagina con atributos de estilo de html(style="background-color:...")
+       por que el diseño es una tarea que are con CSS-->
+ 
     <header>
     
-        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> CROISSANT & CAFFE</h1>
+        <h1> CROISSANT & CAFFE</h1>
+        
         <nav>
             <ul>
-                <li> <a href="#menu">Menú</a> </li>
-                <li> <a href="#acerca-de">Acerca de Nosotros</a></li>
-                <li> <a href="#contacto">Contacto</a></li>
-                <li> <a href="#imagenes">Imágenes</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#acerca-de">Acerca de Nosotros</a></li>
+                <li><a href="#contacto">Contactanos</a></li>
+                <li><a href="#imagenes">Imágenes</a></li>
             </ul>
         </nav>
+
     </header>
-
-
+      <!--El menú de navegación no se alineó horizontalmente con etiquetas html 
+          porque esa es una función de diseño y maquetación, que es responsabilidad de CSS.-->
+  <hr>
 
     <main>
 
@@ -31,102 +36,121 @@
             <h2>Bienvenidos a su Cafeteria Favorita</h2>
             <p>Para un delicioso comienzo ven y ordena en Croissant...</p>
 
-            <div class="video-responsive-container">
-              <iframe 
-                src="https://www.youtube.com/embed/bQsYg4JUU1g?si=wTSSFggSITarWWqt" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-             </iframe>
-            </div>
+            <figure class="video-responsive-container">
+                <iframe 
+                  src="https://www.youtube.com/embed/bQsYg4JUU1g?si=wTSSFggSITarWWqt" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen>
+                </iframe>
+                <figcaption>Un vistaso a nuestro ambiente acogedor.</figcaption>
+            </figure>
         </section>
 
+        <hr>
      
         <section id="menu">
             <h2>Nuestro Menú de café</h2>
-             
 
-            <article>
-                <h3>Espresso</h3>
-                <p>Un trago de espresso puro y concentrado. Ideal para empezar el día</p>
-                <img src="https://www.imahe.cl/14214-large_default/Taza-De-Caf%C3%A9-100Cc-Con-Platillos-Apilable.jpg"
-                     alt="Un vaso de espresso" width="20%" height="10%">
-                <p>Precio: $3.50</p>
-                <button type="submit">Añadir al carrito</button>
-            </article>
-
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imágen</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th></th> 
+                    </tr>
+                </thead>
                 
-            <article>  
-                <h3>Latte</h3>
-                <p>Un clásico café con leche vaporizada, con una fina capa de espuma</p>
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/049/632/997/small_2x/heart-shaped-latte-art-in-a-white-cup-with-coffee-beans-isolated-on-wooden-table-side-view-of-taiwan-baked-food-photo.jpg" 
-                     alt="Un vaso de latte" width="20%" height="10%">
-                <p>Precio: $4.50</p>
-                <button type="submit">Añadir al carrito</button>
-            </article>
+                <tbody>
+                    <tr itemscope itemtype="http://schema.org/MenuItem">
+                        <td><img src="https://www.imahe.cl/14214-large_default/Taza-De-Caf%C3%A9-100Cc-Con-Platillos-Apilable.jpg" 
+                                 alt="Vaso de espresso"class="responsive-image"></td>
+                        <td itemprop="name">Espresso</td>
+                        <td itemprop="description">Un trago de espresso puro y concentrado. Ideal para empezar el día.</td>
+                        <td><span itemprop="price">6.50</span><meta itemprop="priceCurrency" content="PEN">S/</td>
+                        <td><button type="button">Añadir al carrito</button></td>
+                    </tr>
 
-            <article>
-                <h3>Cappuccino</h3>
-                <p>Una mezcla perfecta de espresso, leche y mucha espuma de leche.</p>
-                <img src="https://img77.uenicdn.com/image/upload/v1544802304/category/shutterstock_521711431.jpg"
-                     alt="Un vaso de Cappuchino" width="20%" height="10%">
-                <p>Precio: $4.00</p>
-                <button type="submit">Añadir al carrito</button>
-            </article>
+                    <tr itemscope itemtype="http://schema.org/MenuItem">
+                        <td><img src="https://static.vecteezy.com/system/resources/thumbnails/049/632/997/small_2x/heart-shaped-latte-art-in-a-white-cup-with-coffee-beans-isolated-on-wooden-table-side-view-of-taiwan-baked-food-photo.jpg"
+                                 alt="Vaso de Latte" class="responsive-image"></td>
+                        <td itemprop="name">Latte</td>
+                        <td itemprop="description">Un clásico café con leche vaporizada, con una fina capa de espuma.</td>
+                        <td><span itemprop="price">8.50</span><meta itemprop="priceCurrency" content="PEN">S/</td>
+                        <td><button type="button">Añadir al carrito</button></td>
+                    </tr>
+
+                    <tr itemscope itemtype="http://schema.org/MenuItem">
+                        <td><img src="https://img77.uenicdn.com/image/upload/v1544802304/category/shutterstock_521711431.jpg" 
+                                 alt="Vaso de Cappuccino" class="responsive-image"></td>
+                        <td itemprop="name">Cappuccino</td>
+                        <td itemprop="description">Una mezcla perfecta de espresso, leche y mucha espuma de leche.</td>
+                        <td><span itemprop="price">8.00</span><meta itemprop="priceCurrency" content="PEN">S/</td>
+                        <td><button type="button">Añadir al carrito</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </section>  
-
-         <br> <br>
+              
+          <hr>  <!--El tamaño de las imágenes no se ajustó directamente con atributos HTML. En su lugar
+                se uso una clase en el codigo HTML (class="responsive-image") que luego es referenciada en el CSS.-->
 
         <section id="imagenes">
-
             <h2>Imágenes</h2>
+
             <figure>
                 <img src="https://i.pinimg.com/736x/65/47/2b/65472b3591ed180e296b729555190a18.jpg"
                      alt="El acogedor interior de nuestra cafetería" 
-                     width="50%" height="40%"> 
+                     class="imagen-galeria">
+                <figcaption>El acojedor interior de nuestra cafetería.</figcaption>
+            </figure>
+
+            <figure>         
                 <img src="https://i.pinimg.com/736x/65/19/6c/65196c4be94b4cde6d9cb9fda366873b.jpg"
                      alt="El acogedor interior de nuestra cafetería"
-                     width="50%" height="40%">
+                     class="imagen-galeria">
                 <figcaption>El acojedor interior de nuestra cafetería.</figcaption>
             </figure>
 
             <figure>
                 <img src="https://sensorial.coffee/wp-content/uploads/2023/09/48-e1704212943431.png"
                      alt="Granos de café"
-                     width="50%" height="40%">
+                     class="imagen-galeria">
                 <figcaption>Nuestros granos de café, frescos y de calidad.</figcaption>
             </figure>
-
         </section>
-          
-     <br>
+
+     <hr>   <!--tampoco se usó la etiqueta <br> para crear espacio entre las secciones y en el formulario de contacto
+              porque esa etiqueta esta diseñada para salto lineal en un texto, se utilisara CSS con sus propiedades.   -->
 
         <section id="contacto">
-
             <h2>Contáctanos</h2>
             <form action="#" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
 
 
-                <label for="gmail">Correo:</label><br>
-                <input type="email" id="gmail" name="gmail"><br><br>
+                <label for="gmail">Correo:</label>
+                <input type="email" id="gmail" name="gmail">
 
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
 
-                <button class="add-to-cart-btn">Enviar</button>
+                <button type="submit">Enviar</button><br><br>
+
+                <a href="#inicio">Ir al inicio</a>
             </form>
-
         </section>
 
-     <br>
+     <hr>
 
-        <section>
-
+        <section id="acerca-de">
             <h2>Preguntas Frecuentes</h2>
             <details>
                 <summary>¿Hacen entregas a domicilio?</summary>
@@ -136,14 +160,14 @@
                 <summary>¿Qué métodos de pago aceptan?</summary>
                 <p>Aceptamos tarjetas de crédito, débito y pagos en efectivo.</p>
             </details>
-
         </section>
 
-     <br>    
-
+     <hr>
+         
         <section>
             <h2>Música del lugar</h2>
             <p>Escucha nuestra playlist especial para tomar café</p>
+
             <audio controls>
                 <source src="tranqui.mp3"
                 type="audio/mpeg">
@@ -151,7 +175,7 @@
             </audio>
         </section>
 
-        <br>
+     <hr>
 
       <aside>
         <h3>Nuestro Horario</h3>
@@ -161,12 +185,15 @@
 
     </main> 
 
-    <br>
-
     <footer>
         <p>&copy; 2025 Croissant & Caffe. Todos los derechos reservados.</p>
-        <p>Dirección:Mi casa,lurigancho-Chosica</p>
+        <address>
+            Dirección: Mi casa,Lurigancho-Chosica
+        </address>
     </footer>
-
+    <!--En el cuerpo de mi pagina virtual no hay estilos, tamaño y color de las letras en los títulos 
+        y subtítulos con HTML ya que eso tambien lo arreglare con CSS,
+         porque html solo se encarga de la estructura y contenido de la pagina-->
+    
 </body>  
 </html>
